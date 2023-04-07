@@ -2,10 +2,10 @@ POST http://localhost:5191/breakfasts
 Content-Type: application/json
 
 {
-    "name": "Ve",
-    "description": "Vegan!",
+    "name": "Noodles Sushi",
+    "description": "Noodles sushi with tasty flavor!",
     "startDateTime": "2022-04-08T08:00:00",
-    "endDateTime": "2022-04-08T11:00:00",
+    "endDateTime": "2024-04-08T11:00:00",
     "savory": [
         "Oatmeal",
         "Avocado Toast",
@@ -18,4 +18,4 @@ Content-Type: application/json
 }
 
 ###
-http://localhost:5191/Breakfasts/894100ed-9dc4-4adc-9938-1be6fc5a0585
+http://localhost:5191/Breakfasts/4C4BC740-1C38-40FC-9152-CB3C2C1DA36F

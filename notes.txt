@@ -24,3 +24,17 @@ dotnet run --project BuberBreakfast/BuberBreakfast.csproj
 AddSingleton - one instance for the whole application lifetime
 AddScoped - one instance per request lifetime
 AddTransient - new instance every time
+
+--------------------------------
+-- Using EF Core as ORM
+--------------------------------
+
+dotnet add BuberBreakfast/BuberBreakfast.csproj package Microsoft.EntityFrameworkCore
+dotnet add BuberBreakfast/BuberBreakfast.csproj package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add BuberBreakfast/BuberBreakfast.csproj package Microsoft.EntityFrameworkCore.Design
+
+dotnet tool install --global dotnet-ef
+dotnet tool list -g
+
+dotnet ef migrations add InitialCreate --project BuberBreakfast/BuberBreakfast.csproj
+dotnet ef database update --project BuberBreakfast/BuberBreakfast.csproj
