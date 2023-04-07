@@ -1,0 +1,26 @@
+--------------------------------
+-- Commands to get started
+--------------------------------
+dotnet new sln -o BuberBreakfast
+cd BuberBreakfast/
+
+dotnet new classlib -o BuberBreakfast.Contracts
+dotnet new webapi -o BuberBreakfast
+
+-- general command: dotnet sln add BuberBreakfast.Contracts BuberBreakfast
+-- not for bash: dotnet sln add (ls -r **/*.csproj)
+-- for bash: dotnet sln add $(ls -r **/*.csproj)
+
+dotnet add BuberBreakfast/BuberBreakfast.csproj reference BuberBreakfast.Contracts/BuberBreakfast.Contracts.csproj
+
+dotnet add BuberBreakfast/BuberBreakfast.csproj package ErrorOr
+
+dotnet build 
+dotnet run --project BuberBreakfast/BuberBreakfast.csproj
+
+--------------------------------
+-- Dependency Injection lifetime
+--------------------------------
+AddSingleton - one instance for the whole application lifetime
+AddScoped - one instance per request lifetime
+AddTransient - new instance every time
